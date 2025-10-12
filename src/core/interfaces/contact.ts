@@ -1,4 +1,4 @@
-import { IMongoose } from ".";
+import type { IMongoose } from ".";
 
 export interface IContact extends IMongoose {
   name: string;

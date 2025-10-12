@@ -6,6 +6,7 @@ import {
   ErrorMessage,
   FieldArray,
   useFormikContext,
+  type FieldProps,
 } from "formik";
 import * as Yup from "yup";
 import type { IMedicine } from "../../core/interfaces/medicine";
@@ -220,7 +221,7 @@ const BillingForm = () => {
                               <Col md={4}>
                                 <BootstrapForm.Group className="mb-3">
                                   <Field name={`medicines[${index}].medicine`}>
-                                    {({ field, form }) => (
+                                    {({ field, form }: FieldProps) => (
                                       <select
                                         {...field}
                                         className="form-control"
@@ -277,7 +278,7 @@ const BillingForm = () => {
                                     type="number"
                                     className="form-control"
                                     min={1}
-                                    onChange={(e) => {
+                                    onChange={(e: { target: { value: string; }; }) => {
                                       const quantity =
                                         parseInt(e.target.value, 10) || 0;
                                       const price = m.price || 0;

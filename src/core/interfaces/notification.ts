@@ -1,4 +1,4 @@
-import { IMongoose } from ".";
+import type { IMongoose } from ".";
 import { Types } from 'mongoose';
 
 export interface INotification extends IMongoose{

@@ -1,4 +1,4 @@
-import { IMongoose } from ".";
+import type { IMongoose } from ".";
 
 export interface INewsLetter extends IMongoose {
   firstName?: string;

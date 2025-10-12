@@ -5,7 +5,7 @@ import type { IBilling } from "../../core/interfaces/billing";
 interface Props{
     billing?: IBilling
 }
-const ThermalReceipt = forwardRef(({ billing }: Props, ref) => {
+const ThermalReceipt = forwardRef<HTMLDivElement, Props>(({ billing }: Props, ref) => {
   return (
     <div
       id="receipt-to-print"

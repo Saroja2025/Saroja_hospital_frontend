@@ -27,14 +27,20 @@ useEffect(() => {
 
 const downloadPDF = () => {
   const element = document.getElementById("receipt-to-print");
-  console.log(element)
-  html2pdf().from(element).set({
-    margin: 0,
-    filename: "receipt.pdf",
-    image: { type: "jpeg", quality: 0.98 },
-    html2canvas: { scale: 2 },
-    jsPDF: { unit: "mm", format: [58, 200], orientation: "portrait" }, // 58mm width
-  }).save();
+  if (element) {
+    html2pdf()
+      .from(element)
+      .set({
+        margin: 0,
+        filename: "receipt.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "mm", format: [58, 200], orientation: "portrait" },
+      })
+      .save();
+  } else {
+    console.error("Element with id 'receipt-to-print' not found.");
+  }
 };
 
   return (

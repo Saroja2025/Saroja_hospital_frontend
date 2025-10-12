@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import { IMongoose } from '.';
+import type { IMongoose } from '.';
 
 export interface IAppointment extends IMongoose {
   fullName: string;
