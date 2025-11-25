@@ -1,8 +1,7 @@
 // src/services/httpService.ts
 import axios from "axios";
 
-// const BASE_URL = "http://localhost:9000/api"; // <-- Replace with your API base URL
-const BASE_URL = "https://sarojahospitalbackend-production.up.railway.app/api"; // <-- Replace with your API base URL
+const BASE_URL = "http://localhost:9000/api"; // <-- Replace with your API base URL
 
 // Create axios instance
 const http = axios.create({
